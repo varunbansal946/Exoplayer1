@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:id="@+id/switchfirst1"
-                    android:layout_marginRight="50dp"
+                    android:layout_marginRight="30dp"
                     android:thumb="@drawable/backgraund"
                     android:track="@drawable/customtrack"
 
@@ -102,7 +102,7 @@
                     android:layout_marginTop="20dp"
                     android:id="@+id/switchfirst"
 
-                    android:layout_marginRight="50dp"
+                    android:layout_marginRight="30dp"
                     android:thumb="@drawable/backgraund"
                     android:track="@drawable/customtrack"
 
@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-
+                    android:layout_marginRight="10dp"
                     android:src="@drawable/ic_chevron_right_black_24dp"
                     />
             </LinearLayout>
