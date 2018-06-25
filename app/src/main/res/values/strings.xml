@@ -1,6 +1,12 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">exoplayer</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+=======
+    <string name="app_name">Exoplayer</string>
+
+
+>>>>>>> 1e92c2efc78621c0062ae6d4bf61662c7f623263
 </resources>

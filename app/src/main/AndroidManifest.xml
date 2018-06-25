@@ -12,15 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".exoplayer" />
+        <activity android:name=".LinearLayoutScreenDesign"
+            android:theme="@style/AppDesign">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".exoplayer" />
         <activity android:name=".ImageDetailView"
             android:theme="@style/AppTheme.SlidrActivityTheme"></activity>
+=======
+>>>>>>> 1e92c2efc78621c0062ae6d4bf61662c7f623263
     </application>
 
 </manifest>
