@@ -33,6 +33,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@android:color/background_light"
+            android:layout_marginLeft="10dp"
 
             >
 
@@ -47,12 +48,13 @@
 
                 <TextView
                     android:id="@+id/push"
-                    android:layout_width="wrap_content"
-                    android:textSize="16dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_weight="3"
+
                     android:text="Push Notifications" />
 
                 <Switch
@@ -60,13 +62,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:id="@+id/switchfirst1"
-                    android:minWidth="25dp"
-                    android:layout_marginLeft="110dp"
+                    android:layout_marginRight="50dp"
                     android:thumb="@drawable/backgraund"
                     android:track="@drawable/customtrack"
-                    android:thumbTextPadding="15dp"
-                    android:textStyle="bold|italic"
-                    android:typeface="sans"
+
 
                     />
 
@@ -85,11 +84,12 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+
 
                     android:text="Email Notifications"
                     />
@@ -101,13 +101,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:id="@+id/switchfirst"
-                    android:minWidth="25dp"
-                    android:layout_marginLeft="110dp"
+
+                    android:layout_marginRight="50dp"
                     android:thumb="@drawable/backgraund"
                     android:track="@drawable/customtrack"
-                    android:thumbTextPadding="15dp"
-                    android:textStyle="bold|italic"
-                    android:typeface="sans"/>
+
+                  />
 
 
             </LinearLayout>
@@ -126,10 +125,10 @@
                 >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:layout_weight="3"
                     android:layout_marginTop="20dp"
 
                     android:text="Change Passcode"/>
@@ -138,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:layout_marginLeft="180dp"
+
                     android:src="@drawable/ic_chevron_right_black_24dp"
                     />
             </LinearLayout>
@@ -154,10 +153,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:layout_marginTop="20dp"
 
-                android:layout_marginLeft="10dp"
+
 
                 android:text="Deactivate Account"
                 />
@@ -175,10 +174,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:layout_marginTop="20dp"
 
-                android:layout_marginLeft="10dp"
+
 
                 android:text="Delete Account"/>
 
@@ -193,11 +192,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:textSize="16sp"
 
                 android:layout_marginTop="20dp"
 
-                android:layout_marginLeft="10dp"
+
 
                 android:text="Help and support"/>
             <View
@@ -211,10 +210,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:layout_marginTop="20dp"
 
-                android:layout_marginLeft="10dp"
 
                 android:text="About"/>
 
@@ -229,8 +227,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+
                 android:layout_marginTop="20dp"
 
                 android:text="Rate Us"/>
@@ -246,8 +244,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+
                 android:layout_marginTop="20dp"
 
                 android:text="LogOut"/>
