@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -43,11 +42,3 @@ dependencies {
     implementation 'com.r0adkll:slidableactivity:2.0.6'
 
 }
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> 1e92c2efc78621c0062ae6d4bf61662c7f623263
