@@ -18,14 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".exoplayer"></activity>
+        <activity android:name=".exoplayer" />
         <activity
             android:name=".LinearLayoutScreenDesign"
-            android:theme="@style/AppDesign"></activity>
+            android:theme="@style/AppDesign" />
         <activity
             android:name=".ImageDetailView"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity android:name=".Comment"></activity>
+        <activity android:name=".Comment" />
+        <activity android:name=".snackbar"></activity>
     </application>
 
 </manifest>

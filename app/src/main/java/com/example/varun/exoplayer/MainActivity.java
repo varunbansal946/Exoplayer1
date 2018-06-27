@@ -54,4 +54,9 @@ public class MainActivity extends AppCompatActivity {
         Intent in =new Intent(this,Comment.class);
         startActivity(in);
     }
+
+    public void snackbar(View view) {
+        Intent in =new Intent(this,snackbar.class);
+        startActivity(in);
+    }
 }

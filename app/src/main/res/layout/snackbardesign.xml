@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary"
+    android:layout_margin="7dp"
+    >
+
+    <TextView
+        android:id="@+id/txtsnack"
+        android:layout_width="0dp"
+        android:textColor="@android:color/white"
+        android:layout_height="match_parent"
+        android:text="Snackbar design"
+        android:textSize="16sp"
+        android:padding="7dp"
+        android:layout_weight="6"
+        />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/close"
+        android:padding="7dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

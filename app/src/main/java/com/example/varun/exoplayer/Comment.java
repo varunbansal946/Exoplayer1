@@ -120,7 +120,7 @@ public class Comment extends AppCompatActivity {
                             addClickablePartTextViewResizable(Html.fromHtml(text), tv, lineEndIndex, expandText,
                                     viewMore), TextView.BufferType.SPANNABLE);
 
-//                tv.setVisibility(View.VISIBLE);
+                tv.setVisibility(View.VISIBLE);
 
             }
         });
@@ -137,14 +137,14 @@ public class Comment extends AppCompatActivity {
 
                 @Override
                 public void onClick(View widget) {
-//                    tv.setVisibility(View.INVISIBLE);
+                    tv.setVisibility(View.INVISIBLE);
                     tv.setLayoutParams(tv.getLayoutParams());
 
                     tv.setText(tv.getTag().toString(), TextView.BufferType.SPANNABLE);
                     tv.invalidate();
                     if (viewMore) {
                         Log.d("tag1","first block");
-//                        makeTextViewResizable(tv, -1, "", false);
+                        makeTextViewResizable(tv, -1, "View Less", false);
                     }
  else {
                         Log.d("tag1","second block");
