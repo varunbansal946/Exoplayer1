@@ -28,6 +28,15 @@
         android:onClick="imagevideo"
 
         />
+    <Button
+        android:layout_below="@+id/imagevideo"
+        android:id="@+id/comentActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment Activity"
+        android:onClick="comment"
+
+        />
 
 
 

@@ -18,6 +18,8 @@ import android.view.MotionEvent;
  *
  * @author Chris Banes
  */
+
+//To avoid exception on zooom out
 public class HackyViewPager extends ViewPager {
 	
     public HackyViewPager(Context context) {

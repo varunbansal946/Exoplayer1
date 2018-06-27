@@ -49,4 +49,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(in);
 
     }
+
+    public void comment(View view) {
+        Intent in =new Intent(this,Comment.class);
+        startActivity(in);
+    }
 }
