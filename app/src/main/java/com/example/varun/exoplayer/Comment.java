@@ -23,7 +23,7 @@ public class Comment extends AppCompatActivity {
 
    public static final String[] comments={"This is sample Comment "
            ,"This is sample Comment  This is sample Comment  ",
-    "This is sample Comment  This is sample Comment This is sample Comment This is sample Comment  This is sample Comment This is sample Comment  This is sample Comment","This is sample Comment This is sample Comment " +
+    "This is sample Comment This is sample Comment This is sample Comment This is sample Comment  This is sample Comment This is sample Comment  This is sample Comment","This is sample Comment This is sample Comment " +
             "This is sample Comment This is sample Comment This is sample Comment This is sample Comment This is sample Comment This is sample Comment "};
 @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,13 +144,13 @@ public class Comment extends AppCompatActivity {
                     tv.invalidate();
                     if (viewMore) {
                         Log.d("tag1","first block");
-                        makeTextViewResizable(tv, -1, "", false);
+//                        makeTextViewResizable(tv, -1, "", false);
                     }
-// else {
-//                        Log.d("tag1","second block");
-//                        makeTextViewResizable(tv, 3, "View More", true);
-//
-//                    }
+ else {
+                        Log.d("tag1","second block");
+                        makeTextViewResizable(tv, 3, "View More", true);
+
+                    }
 
                 }
             }, str.indexOf(spanableText), str.indexOf(spanableText) + spanableText.length(), 0);
