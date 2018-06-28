@@ -43,7 +43,9 @@ import butterknife.ButterKnife;
 
         SlidrConfig config = new SlidrConfig.Builder()
                                .position(SlidrPosition.BOTTOM)
-                                .build();
+
+                                .build()
+                                ;
 
         Slidr.attach(this,config);
         viewPager=findViewById(R.id.viewpager);

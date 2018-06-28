@@ -1,6 +1,4 @@
 package com.example.varun.exoplayer;
-
-
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -74,8 +72,17 @@ public class VideoDisplay extends Fragment {
             MediaSource mediaSource = new ExtractorMediaSource(videouri, dataSourceFactory, factory, null, null);
             simpleExoPlayerView.setPlayer(player);
             player.prepare(mediaSource);
+            player.setPlayWhenReady(false);
+            if(savedInstanceState!=null)
+            {
+                long value=savedInstanceState.getLong("seek");
+                player.seekTo(value);
+                player.setPlayWhenReady(true);
 
-//            player.setPlayWhenReady(true);
+
+            }
+
+
 
         }
         catch (Exception e)
@@ -105,5 +112,24 @@ public class VideoDisplay extends Fragment {
             player.setPlayWhenReady(false);
             Log.d("TAG","NOT VISIBLE");
         }
+        else if(isVisibleToUser&&player!=null) {
+            player.setPlayWhenReady(true);
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        player.setPlayWhenReady(false);
+        Log.d("VIDEO",player.getCurrentPosition()+"");
+        outState.putLong("seek",player.getCurrentPosition());
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        player.setPlayWhenReady(false);
+//        Log.d("state","In pause");
     }
 }

@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
@@ -21,7 +22,7 @@ public class Comment extends AppCompatActivity {
     RecyclerView commentRecyclerView;
     public static boolean flag=true;
 
-   public static final String[] comments={"This is sample Comment "
+   public static final String[] comments={"This is sample Comment This is sample Comment ","This is sample Comment "
            ,"This is sample Comment  This is sample Comment  ",
     "This is sample Comment This is sample Comment This is sample Comment This is sample Comment  This is sample Comment This is sample Comment  This is sample Comment","This is sample Comment This is sample Comment " +
             "This is sample Comment This is sample Comment This is sample Comment This is sample Comment This is sample Comment This is sample Comment "};
@@ -29,7 +30,6 @@ public class Comment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
-
         commentRecyclerView =(RecyclerView)(findViewById(R.id.commentRecyclerView));
         commentRecyclerView.setAdapter(new adapter());
         commentRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -49,7 +49,7 @@ public class Comment extends AppCompatActivity {
         public void onBindViewHolder(Viewholder holder, int position) {
             TextView comment=holder.comment;
             comment.setText(comments[position]);
-            makeTextViewResizable(comment,3,"View More",true);
+            makeTextViewResizable(comment,3,"See more",true);
 
         }
 
@@ -92,17 +92,17 @@ public class Comment extends AppCompatActivity {
                 obs.removeGlobalOnLayoutListener(this);
                 if (maxLine == 0) {
                     lineEndIndex = tv.getLayout().getLineEnd(0);
-                    text = tv.getText().subSequence(0, lineEndIndex - expandText.length() + 1) + " " + expandText;
+                    text = tv.getText().subSequence(0, lineEndIndex - expandText.length() + 1) + "..." + expandText;
                 } else if (tv.getLineCount() < maxLine) {
                     //do nothing
-                    lineEndIndex = tv.getLayout().getLineEnd(maxLine - 1);
+                    lineEndIndex = tv.getLayout().getLineEnd(0);
 
                     text = tv.getText().toString();
                 }
 //
                 else if (maxLine > 0 && tv.getLineCount() >= maxLine) {
                     lineEndIndex = tv.getLayout().getLineEnd(maxLine - 1);
-                    text = tv.getText().subSequence(0, lineEndIndex - expandText.length() + 1) + " " + expandText;
+                    text = tv.getText().subSequence(0, lineEndIndex - expandText.length() + 1) + "..." + expandText;
                     Log.d("TAG", text);
                 } else {
                     lineEndIndex = tv.getLayout().getLineEnd(tv.getLayout().getLineCount() - 1);
@@ -127,13 +127,40 @@ public class Comment extends AppCompatActivity {
 
     }
 
+    public static class MySpannable extends ClickableSpan {
+
+        private boolean isUnderline = false;
+
+        /**
+         * Constructor
+         */
+        public MySpannable(boolean isUnderline) {
+            this.isUnderline = isUnderline;
+        }
+
+        @Override
+        public void updateDrawState(TextPaint ds) {
+
+            ds.setUnderlineText(isUnderline);
+            ds.setColor(Color.parseColor("#0000ff"));
+
+        }
+
+        @Override
+        public void onClick(View widget) {
+
+        }
+    }
+
+
+
     private static SpannableStringBuilder addClickablePartTextViewResizable(final Spanned strSpanned, final TextView tv,
                                                                             final int maxLine, final String spanableText, final boolean viewMore) {
         String str = strSpanned.toString();
         SpannableStringBuilder ssb = new SpannableStringBuilder(strSpanned);
 
         if (str.contains(spanableText)) {
-            ssb.setSpan(new ClickableSpan() {
+            ssb.setSpan(new MySpannable(false) {
 
                 @Override
                 public void onClick(View widget) {
@@ -146,9 +173,9 @@ public class Comment extends AppCompatActivity {
                         Log.d("tag1","first block");
                         makeTextViewResizable(tv, -1, "View Less", false);
                     }
- else {
+                else {
                         Log.d("tag1","second block");
-                        makeTextViewResizable(tv, 3, "View More", true);
+                        makeTextViewResizable(tv, 3, "See more", true);
 
                     }
 
@@ -161,6 +188,9 @@ public class Comment extends AppCompatActivity {
 
     }
 
-
-
+    @Override
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        Log.d("destroy","Destroy called");
+    }
 }
