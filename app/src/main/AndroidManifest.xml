@@ -22,6 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".MainActivity" />
         <activity android:name=".exoplayer" />
         <activity
@@ -45,16 +46,31 @@
         <activity android:name=".ListOfNearByPlaces.GetCurrentLocation" />
         <activity android:name=".ListOfNearByPlaces.ListOfNearByPlaces" />
         <activity android:name=".ListOfNearByPlacesUsingRetrofit.CurrentLocationRetrofit">
+=======
+        <activity android:name=".MainActivity">
+>>>>>>> 901b8ea0e8bc3684236d085bc0cb87b4cb16ccb3
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".ListOfNearByPlacesUsingRetrofit.NextOnClickRecyclerView" />
         <activity
             android:name=".ListOfNearByPlacesUsingRetrofit.AnimationMapActivity"
             android:label="@string/title_activity_animation_map"></activity>
+=======
+        <activity android:name=".exoplayer" />
+        <activity
+            android:name=".LinearLayoutScreenDesign"
+            android:theme="@style/AppDesign" />
+        <activity
+            android:name=".ImageDetailView"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity android:name=".Comment" />
+        <activity android:name=".snackbar"></activity>
+>>>>>>> 901b8ea0e8bc3684236d085bc0cb87b4cb16ccb3
     </application>
 
 </manifest>

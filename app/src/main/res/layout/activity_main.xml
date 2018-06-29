@@ -6,14 +6,48 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
+
     tools:context="com.example.varun.exoplayer.MainActivity">
 <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Next"
     android:onClick="next"
+    android:id="@+id/next"
+
 
     />
+
+
+    <Button
+        android:layout_below="@+id/next"
+        android:id="@+id/imagevideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image Video"
+        android:onClick="imagevideo"
+
+        />
+    <Button
+        android:layout_below="@+id/imagevideo"
+        android:id="@+id/commentActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment Activity"
+        android:onClick="comment"
+
+        />
+
+    <Button
+        android:layout_below="@+id/commentActivity"
+        android:id="@+id/SnackbarActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Snackbar Activity"
+        android:onClick="snackbar"
+
+        />
+
 
 
 </RelativeLayout>
